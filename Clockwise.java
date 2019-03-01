@@ -19,7 +19,6 @@ public class Clockwise implements Bot {
         if(move == 13){
           move = 1;
         }
-        System.out.println(move);
         return move;
     }
 }
