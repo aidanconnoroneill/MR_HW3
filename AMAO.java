@@ -21,11 +21,11 @@ public class Pujara implements Bot {
     private Random generator = new Random();
     public int getNextMove(int player1LastMove, int player2LastMove) {
 
-        if (numRounds<10){
+        if (numRounds<5){
             avgUtility= ((avgUtility*numRounds)+
             this.scoreRound(ourMove,player1LastMove,player2LastMove))/(numRounds+1);
             numRounds+=1;
-            System.out.println("Our score: "+Double.toString(avgUtility));
+            // System.out.println("Our score: "+Double.toString(avgUtility));
             return ourMove;
           }
         else if(avgUtility<=8){
@@ -33,14 +33,14 @@ public class Pujara implements Bot {
              avgUtility= ((avgUtility*numRounds)+
              this.scoreRound(ourMove,player1LastMove,player2LastMove))/(numRounds+1);
              numRounds+=1;
-             System.out.println("Our score: "+Double.toString(avgUtility));
+             // System.out.println("Our score: "+Double.toString(avgUtility));
              return ourMove;
         }
         else{
           avgUtility= ((avgUtility*numRounds)+
           this.scoreRound(ourMove,player1LastMove,player2LastMove))/(numRounds+1);
             numRounds+=1;
-            System.out.println("Our score: "+Double.toString(avgUtility));
+            // System.out.println("Our score: "+Double.toString(avgUtility));
             return ourMove;
         }
     }
